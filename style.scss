@@ -1,0 +1,136 @@
+* {
+  margin: 0 5px;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  height: 100vh;
+}
+
+#center-width {
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+  font-size: 3em;
+}
+
+.header {
+  height: 10%;
+//   border: 2px solid red;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  &__logo {
+    font-size: 4vw;
+  }
+
+  &__menu {
+    display: flex;
+    font-size: 2.5vw;
+    gap: 15px;
+  }
+}
+
+.main {
+  height: 80%;
+//   border: 2px solid black;
+  display: flex;
+  flex-direction: row;
+
+
+  &__image {
+    background-image: url("./assets/images/ashish-img.jpg");
+    width: 50%;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: contain; 
+  }
+
+  &__text {
+    width: 50%;
+    // border: 2px solid blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &-1{
+        font-size: 10vh;
+    }
+    &-2,&-3,&-4{
+        font-size: 5vw;
+    }
+  }
+}
+
+.footer {
+  height: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 10%;
+  gap: 20px;
+}
+
+
+[class^="footer__"]{
+    img{
+        width: 5.3vw;
+    }
+}
+
+
+@media  (max-width: 450px){
+    .header{
+        justify-content: center;
+        &__logo{
+            font-size: 40px;
+        }
+        &__menu{
+            display: none;
+        }
+    }
+    .main{
+        flex-direction: column;
+        align-items: center;
+        justify-self: center;
+        &__image{
+            width: 200px;
+            height: 200px;
+            border-radius: 100%;
+            background-size: 100%;
+            background-position-y: 0px;
+        }
+        &__text{
+            width: 100%;
+            margin: 30px;
+            &-1{
+                display: none;
+            }
+            &-2,&-3,&-4{
+                
+                font-size: 30px;
+            }
+        }
+    
+    }
+    .footer{
+        justify-content: space-evenly;
+        margin-left: 0px ;
+        [class^="footer__"]{
+            img{
+                width: 45px;
+                height: 45px;
+            }
+        }
+    }
+}
