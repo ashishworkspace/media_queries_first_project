@@ -52,6 +52,11 @@ body {
   gap: 15px;
 }
 
+.header__menu a {
+  text-decoration: none;
+  color: black;
+}
+
 .main {
   height: 80%;
   display: -webkit-box;
