@@ -2,4 +2,4 @@
 😁</br></br>
 First Responsive Website</br>
 ### Visit 👇
-https://ashishworkspace.github.io/media_query_first_prohject/
+https://ashishworkspace.github.io/media_queries_first_project/
