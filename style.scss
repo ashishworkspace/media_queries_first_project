@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+
 * {
   margin: 0 5px;
   padding: 0;
@@ -5,7 +7,7 @@
 }
 body {
   font-family: 15px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'DM Sans', sans-serif ;
 }
 
 .container {
@@ -29,19 +31,18 @@ body {
   align-items: center;
 
   &__logo {
-    font-size: 4vw;
+    font-size: 3.5vw;
   }
 
   &__menu {
     display: flex;
-    font-size: 2.5vw;
+    font-size: 2.0vw;
     gap: 15px;
     a{
       text-decoration: none;
       color: black;
     }
   }
-
 }
 
 .main {
@@ -57,6 +58,7 @@ body {
     background-repeat: no-repeat;
     background-position: left center;
     background-size: contain; 
+    border-radius: 10px;
   }
 
   &__text {
@@ -69,9 +71,10 @@ body {
 
     &-1{
         font-size: 10vh;
+        margin-bottom:20px ;
     }
     &-2,&-3,&-4{
-        font-size: 5vw;
+        font-size: 3vw;
     }
   }
 }
@@ -89,13 +92,14 @@ body {
 
 [class^="footer__"]{
     img{
-        width: 5.3vw;
+        width: 4.3vw;
     }
 }
 
 
 @media  (max-width: 450px){
     .header{
+      height: 20%;
         justify-content: center;
         &__logo{
             font-size: 40px;
@@ -105,6 +109,7 @@ body {
         }
     }
     .main{
+        height: 60%;
         flex-direction: column;
         align-items: center;
         justify-self: center;
@@ -129,7 +134,7 @@ body {
     
     }
     .footer{
-        justify-content: space-evenly;
+        justify-content: center;
         margin-left: 0px ;
         [class^="footer__"]{
             img{
@@ -138,4 +143,25 @@ body {
             }
         }
     }
+}
+
+
+@media (max-width: 754px){
+  .main{
+    &__text{
+      &-1{
+        font-size: 3rem;
+      }
+    }
+  }
+  .footer{
+    
+    justify-content: center;
+    [class^="footer__"]{
+      margin: 0;
+      img{
+        width: 3rem;
+      }
+    }
+  }
 }
